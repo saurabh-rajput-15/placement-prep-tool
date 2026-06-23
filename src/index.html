@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Placement Prep Tool</title>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('placementPrepTool_theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div id="storage-banner" hidden>
+    ⚠ Your browser has blocked local storage. Data will not be saved after you close this tab.
+  </div>
+
+  <header class="app-header">
+    <nav id="main-nav" class="app-nav">
+      <a href="#dashboard" class="nav-brand">
+        <span class="nav-brand__icon" aria-hidden="true">🎓</span>
+        <span class="nav-brand__text">PrepTool</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#dashboard" class="nav-link">Dashboard</a>
+        <a href="#dsa" class="nav-link">DSA</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#cs" class="nav-link">CS</a>
+        <a href="#aptitude" class="nav-link">Aptitude</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#company" class="nav-link">Simulator</a>
+        <a href="#settings" class="nav-link">Settings</a>
+      </div>
+
+      <div id="nav-actions" class="nav-actions"></div>
+    </nav>
+  </header>
+
+  <main id="view-root"></main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

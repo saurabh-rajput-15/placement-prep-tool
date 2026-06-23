@@ -1,0 +1,14 @@
+{
+  "name": "placement-prep-tool",
+  "version": "1.0.0",
+  "description": "Frontend-only placement preparation tracker SPA",
+  "type": "module",
+  "scripts": {
+    "test": "vitest --run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "fast-check": "3.22.0",
+    "vitest": "2.1.9"
+  }
+}
